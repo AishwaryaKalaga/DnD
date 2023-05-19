@@ -12,8 +12,34 @@ public class Main{
         while(ans){
             if (response.equals("y")){
                 ans = false;
+                //Character selection, switch statments
+                System.out.println("Pick your character:");
+                System.out.println("bard");
+                System.out.println("fighter");
+                System.out.println("mage");
+                System.out.println("wizard");
+                System.out.println("rogue");
+                String character = scan.nextLine();
+
+                switch(character){
+                    case "bard":
+                        System.out.println("You selected bard!");
+                        break;
+                    case "fighter":
+                        System.out.println("You selected fighter!");
+                        break;
+                    case "mage":
+                        System.out.println("You selected mage!");
+                        break;
+                    case "wizard":
+                        System.out.println("You selected wizard!");
+                        break;
+                    default:
+                        System.out.println("You have been assigned rogue");
+                        break;
+                }
+
             }
-            //TODO - the else if needs to be fixed
             else if (response.equals("n")){
                 ans = false;
                 System.out.println("End of program");
@@ -24,34 +50,6 @@ public class Main{
                 response = scan.nextLine();
             }
         }
-        //Character selection, switch statments
-        System.out.println("Pick your character:");
-        System.out.println("bard");
-        System.out.println("fighter");
-        System.out.println("mage");
-        System.out.println("wizard");
-        System.out.println("rogue");
-        String character = scan.nextLine();
-
-        switch(character){
-            case "bard":
-                System.out.println("You selected bard!");
-                break;
-            case "fighter":
-                System.out.println("You selected fighter!");
-                break;
-            case "mage":
-                System.out.println("You selected mage!");
-                break;
-            case "wizard":
-                System.out.println("You selected wizard!");
-                break;
-            default:
-                System.out.println("You have been assigned rogue");
-                break;
-        }
-
-        
         
         //to prevent resouce leaks
         scan.close();
