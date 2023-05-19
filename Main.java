@@ -38,6 +38,10 @@ public class Main{
                         System.out.println("You have been assigned rogue");
                         break;
                 }
+                System.out.println("What would you like to name your character?");
+                String name = scan.nextLine();
+                System.out.println("Your character has been named " + name);
+
 
             }
             else if (response.equalsIgnoreCase("n")){
