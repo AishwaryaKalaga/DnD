@@ -1,4 +1,5 @@
-public class Character {
+import java.io.Serializable;
+public class Character implements Serializable {
     private String race;
     private String name;
     private int level;
@@ -23,8 +24,9 @@ public class Character {
 
 
     }
+    public String raiseLevel() {
+        level=1;       
+        return "Congrats! Your level is now "+level;
 
-    
-    
-
+    }
 }
