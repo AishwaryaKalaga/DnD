@@ -18,12 +18,13 @@ public class Character {
     public String Character (String race, Stringname){
         this.race = race;
         this.name = name;
+        getLevel();
 
 
 
     }
 
-        
+    
     
 
 }
