@@ -15,7 +15,7 @@ public class Character implements Serializable {
     }
     public void assign () {
         switch (race) {
-            case "";
+            case "":
         }
     }
     public String raiseLevel() {
@@ -24,6 +24,6 @@ public class Character implements Serializable {
 
     }
     public String getCharacter() {
-        String "Your character " +name +" is a " +race;
+        return "Your character " +name +" is a " +race;
     }
 }
