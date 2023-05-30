@@ -55,7 +55,14 @@ public class Main{
             }
                 
             //Start of story
-            
+            System.out.println("Would you like a happy story, or a sad one?");
+            String story = scan.nextLine();
+            if (story.equalsIgnoreCase("happy")){
+                System.out.println("Starting happy story");
+            }
+            else if (story.equalsIgnoreCase("sad")){
+
+            }
 
 
 
