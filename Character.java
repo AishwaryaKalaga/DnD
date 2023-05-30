@@ -1,28 +1,42 @@
-import java.io.Serializable;
-public class Character implements Serializable {
+public class Character {
     private String race;
     private String name;
     private static int level;
     private int health;
-    //private int strength;
-    //private int defense;
+
 
     public Character (String race, String name){
         this.race = race;
         this.name = name;
-        level=0;
-
-    }
-    public void assign () {
+        level=1;
         switch (race) {
-            case "":
+            case "fighter":
+                health=100;
+                break;
+            case "bard":
+                health=90;
+                break;
+            case "ranger":
+                health=75;
+                break;
+            case "wizard":
+                health=50;
+                break;  
+            default :
+                health=120;
+                break;
         }
+        health=level*(health/5);
     }
+    public int getHealth () {
+        return health;
+    }
+
     public String raiseLevel() {
         level++;       
         return "Congrats! Your level is now "+level;
-
     }
+
     public String getCharacter() {
         return "Your character " +name +" is a " +race;
     }

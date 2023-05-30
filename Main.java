@@ -5,8 +5,7 @@ public class Main{
         Scanner scan = new Scanner(System.in);
 
         //Introduction
-        System.out.println("Welcome to Dungeons and Dragons!");
-        System.out.println("Are you ready to start your quest? y/n");
+        System.out.println("Welcome to Dungeons and Dragons! /nAre you ready to start your quest? y/n");
         String response = scan.nextLine();
         boolean ans = true;
         while(ans){
@@ -59,6 +58,9 @@ public class Main{
             
             
             //Start of story
+//<<<<<<< HEAD
+            
+//=======
             System.out.println("Would you like a happy story, or a sad one?");
             String story = scan.nextLine();
             if (story.equalsIgnoreCase("happy")){
@@ -68,7 +70,6 @@ public class Main{
             else if (story.equalsIgnoreCase("sad")){
 
             }
-
 
 
         }
