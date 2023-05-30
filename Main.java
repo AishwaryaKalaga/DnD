@@ -53,6 +53,12 @@ public class Main{
                 System.out.println("Oops! It looks like that didn't match y/n. Try again.");
                 response = scan.nextLine();
             }
+                
+            //Start of story
+            
+
+
+
         }
         
         //to prevent resouce leaks
