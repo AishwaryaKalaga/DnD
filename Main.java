@@ -5,7 +5,7 @@ public class Main{
         Scanner scan = new Scanner(System.in);
 
         //Introduction
-        System.out.println("Welcome to Dungeons and Dragons! /nAre you ready to start your quest? y/n");
+        System.out.println("Welcome to Dungeons and Dragons! \nAre you ready to start your quest? y/n");
         String response = scan.nextLine();
         boolean ans = true;
         while(ans){
