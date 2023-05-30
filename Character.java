@@ -1,5 +1,4 @@
-import java.io.Serializable;
-public class Character implements Serializable {
+public class Character {
     private String race;
     private String name;
     private static int level;
@@ -9,29 +8,25 @@ public class Character implements Serializable {
     public Character (String race, String name){
         this.race = race;
         this.name = name;
-        level=0;
-        health=0;
-
-    }
-    public void assignHealth () {
+        level=1;
         switch (race) {
             case "fighter":
-                break;
                 health=100;
+                break;
             case "bard":
                 health=90;
                 break;
             case "ranger":
-                break;
                 health=75;
-            case "wizard":
                 break;
+            case "wizard":
                 health=50;
+                break;  
             default :
                 health=120;
                 break;
-            health=health*(level/5)
         }
+        health=level*(health/5);
     }
     public int getHealth () {
         return health;
@@ -40,8 +35,8 @@ public class Character implements Serializable {
     public String raiseLevel() {
         level++;       
         return "Congrats! Your level is now "+level;
-
     }
+
     public String getCharacter() {
         return "Your character " +name +" is a " +race;
     }
