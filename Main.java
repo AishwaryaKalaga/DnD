@@ -12,16 +12,16 @@ public class Main{
         while(ans){
             if (response.equalsIgnoreCase("y")){
                 ans = false;
-                //Character selection, switch statments
-                System.out.println("Pick your character:");
+                //Race selection, switch statments
+                System.out.println("Pick your race:");
                 System.out.println("bard");
                 System.out.println("fighter");
                 System.out.println("ranger");
                 System.out.println("wizard");
                 System.out.println("rogue");
-                String character = scan.nextLine();
+                String race = scan.nextLine();
 
-                switch(character){
+                switch(race){
                     case "bard":
                         System.out.println("You have been assigned bard!");
                         break;
@@ -42,6 +42,8 @@ public class Main{
                 String name = scan.nextLine();
                 System.out.println("Your character has been named " + name);
 
+                Character user = new Character(race, name);
+
 
             }
             else if (response.equalsIgnoreCase("n")){
@@ -53,12 +55,15 @@ public class Main{
                 System.out.println("Oops! It looks like that didn't match y/n. Try again.");
                 response = scan.nextLine();
             }
-                
+            
+            
+            
             //Start of story
             System.out.println("Would you like a happy story, or a sad one?");
             String story = scan.nextLine();
             if (story.equalsIgnoreCase("happy")){
                 System.out.println("Starting happy story");
+                
             }
             else if (story.equalsIgnoreCase("sad")){
 
