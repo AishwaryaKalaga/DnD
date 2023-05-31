@@ -28,16 +28,19 @@ public class Character {
         }
         health=level*(health/5);
     }
-    public int getHealth () {
+    public int getHealth (Character c) {
         return health;
     }
 
-    public String raiseLevel() {
+    public String raiseLevel(Character c) {
         level++;       
         return "Congrats! Your level is now "+level;
     }
 
-    public String getCharacter() {
+    public String getCharacter(Character c) {
         return "Your character " +name +" is a " +race;
+    }
+    public int getLevel(Character c){
+        return level;
     }
 }

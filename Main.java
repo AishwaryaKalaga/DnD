@@ -58,13 +58,11 @@ public class Main{
             
             
             //Start of story
-//<<<<<<< HEAD
-            
-//=======
             System.out.println("Would you like a happy story, or a sad one?");
             String story = scan.nextLine();
             if (story.equalsIgnoreCase("happy")){
                 System.out.println("Starting happy story");
+                System.out.println(raiseLevel(user));
                 
             }
             else if (story.equalsIgnoreCase("sad")){
