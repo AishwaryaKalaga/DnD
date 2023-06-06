@@ -20,28 +20,19 @@ public class Main{
                 System.out.println("rogue");
                 String race = scan.nextLine();
 
-                switch(race){
-                    case "bard":
-                        System.out.println("You have been assigned bard!");
-                        break;
-                    case "fighter":
-                        System.out.println("You have been assigned fighter!");
-                        break;
-                    case "ranger":
-                        System.out.println("You have been assigned ranger!");
-                        break;
-                    case "wizard":
-                        System.out.println("You haved been assigned wizard!");
-                        break;
-                    default:
-                        System.out.println("You have been assigned rogue");
-                        break;
+                if (!(race.equals("bard")||race.equals("fighter")||race.equals("ranger")||race.equals("wizard"))) {
+                    System.out.println("You have been assigned rogue");
+                    race="rougue";
                 }
+                else {
+                    System.out.println("You have been assigned" + race);
+                }
+
                 System.out.println("What would you like to name your character?");
                 String name = scan.nextLine();
                 System.out.println("Your character has been named " + name);
 
-                Character user = new Character(race, name);
+                Character char = new Character(race, name);
 
 
             }
@@ -62,7 +53,7 @@ public class Main{
             String story = scan.nextLine();
             if (story.equalsIgnoreCase("happy")){
                 System.out.println("Starting happy story");
-                System.out.println(raiseLevel(user));
+                System.out.println(raiseLevel(char));
                 
             }
             else if (story.equalsIgnoreCase("sad")){
