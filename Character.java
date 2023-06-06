@@ -40,7 +40,4 @@ public class Character {
     public String getCharacter(Character c) {
         return "Your character " +name +" is a " +race;
     }
-    public int getLevel(Character c){
-        return level;
-    }
 }
